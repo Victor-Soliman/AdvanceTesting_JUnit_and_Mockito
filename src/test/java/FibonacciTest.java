@@ -15,7 +15,6 @@ class FibonacciTest {
         fibonacci = new Fibonacci();
     }
 
-
     @ParameterizedTest
     @CsvSource(value = {"6,8", "12,144", "14,377"}) // we choose the first value as the position of the number ,
         // and the second parameter is the number itself

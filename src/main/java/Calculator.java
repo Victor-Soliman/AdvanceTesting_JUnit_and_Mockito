@@ -11,4 +11,11 @@ public class Calculator {
     public boolean isOdd(int number) {
         return number % 2 == 1;
     }
+
+    public double divide(int firstNumber, int secondNumber) {
+        if (secondNumber == 0) {
+            throw new IllegalArgumentException("Cannot divide by 0");
+        }
+        return (double) firstNumber / secondNumber;
+    }
 }

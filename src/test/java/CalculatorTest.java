@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
@@ -177,4 +178,24 @@ class CalculatorTest {
         }
     }
 
+    // Testing Exceptions
+    // 1) we need 2 test methods cause in out method ;
+    // the first case : is when element == 0 , and the other case is when the element is different than 0
+
+    @Test
+    void testDivideByZero(){
+        //when
+        // we choose assertThrows ,and we need to tell what kind of exception we receive (IllegalArgumentException.class)
+        // actually is the same exception type like the one thrown in the method,
+        // and then we say when we use this exception ? -> answer -> when we divide by 0 , and because here we have
+        // an executable interface(functional interface) wee use lambda expression for that
+        IllegalArgumentException exception =
+                assertThrows(IllegalArgumentException.class, () -> calculator.divide(5, 0));
+
+        //then
+        //here we test that the message "Cannot divide by 0" is the same as the one thrown in the method
+        //the test will fail is the expected message is not the same as the one gotten
+        Assertions.assertEquals("Cannot divide by 0", exception.getMessage());
+
+    }
 }
