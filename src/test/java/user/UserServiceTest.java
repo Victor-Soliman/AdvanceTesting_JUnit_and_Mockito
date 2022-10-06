@@ -1,6 +1,5 @@
-package User;
+package user;
 
-import com.sun.source.tree.ModuleTree;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,11 +11,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 // in order to use Mockito library we should put the annotations @ExtendWith(MockitoExtension.class)
 
 @ExtendWith(MockitoExtension.class)
+//@RunWith(JUnitPlatform.class)  // se mai foloseste dar nu e musai
 class UserServiceTest {
 
     // we need to simulate the id and the user that we will work with ( cause it wil NOT bring me data from DB , insted
