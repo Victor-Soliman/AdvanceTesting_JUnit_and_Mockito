@@ -188,7 +188,7 @@ class CalculatorTest {
         // we choose assertThrows ,and we need to tell what kind of exception we receive (IllegalArgumentException.class)
         // actually is the same exception type like the one thrown in the method,
         // and then we say when we use this exception ? -> answer -> when we divide by 0 , and because here we have
-        // an executable interface(functional interface) wee use lambda expression for that
+        // an executable interface(functional interface) we use lambda expression for that
         IllegalArgumentException exception =
                 assertThrows(IllegalArgumentException.class, () -> calculator.divide(5, 0));
 
