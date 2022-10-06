@@ -1,7 +1,8 @@
 # AdvanceTesting_JUnit_and_Mockito
 
 - You can create a test by clicking on the class name you want to make class Test for it ,and choose a librery ,then choose the method(s) you want to test.
-- the test mwthods don't need a a return type.
+- the test methods don't need a a return type.
+- the  tests helps us to reduce the time needed to run the entier code.
 
 -Life Cycle methods in JUnit 5: 
 
